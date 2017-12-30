@@ -1,0 +1,5 @@
+.jshintrc
+.eslintrc
+node_modules
+dist
+github-battle.sublime-project
