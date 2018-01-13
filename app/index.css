@@ -30,3 +30,32 @@ li {
 .language--selected {
   color: #d0021b;
 }
+
+.popular-list {
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+
+.popular-list-item {
+  margin: 20px;
+  text-align: center;
+}
+
+.popular-list-item__rank {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.popular-list-item__avatar {
+  width: 150px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.popular-list-item__data {
+  margin-bottom: 7px;
+}
