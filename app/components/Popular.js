@@ -1,6 +1,6 @@
-var React = require('react');
-var Proptypes = require('prop-types');
-var api = require('../utils/api');
+import React from 'react'
+import PropTypes from 'prop-types'
+import { fetchPopularRepos } from '../utils/api'
 
 function SelectLanguage(props) {
 
@@ -36,7 +36,7 @@ function RepoGrid(props){
 
             <ul className='popular-list-item__data'>
               <li>
-                <img src={repo.owner.avatar_url} alt={'Avatar for ' + repo.owner.login} className='popular-list-item__avatar'/>
+                <img src={repo.owner.avatar_url} alt={'Avatar for ' + repo.owner.login} className='avatar'/>
               </li>
               <li><a href={repo.html_url}>{repo.name}</a></li>
               <li>@{repo.owner.login}</li>
@@ -50,12 +50,12 @@ function RepoGrid(props){
 }
 
 RepoGrid.propTypes = {
-  repos: Proptypes.array.isRequired
+  repos: PropTypes.array.isRequired
 }
 
 SelectLanguage.propTypes = {
-  selectedLanguage: Proptypes.string.isRequired,
-  onSelect: Proptypes.func.isRequired
+  selectedLanguage: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired
 }
 
 class Popular extends React.Component {
@@ -82,7 +82,7 @@ class Popular extends React.Component {
       }
     })
 
-    api.fetchPopularRepos(lang)
+    fetchPopularRepos(lang)
       .then( (repos) => {
         this.setState( () => {
           return {
@@ -115,4 +115,4 @@ class Popular extends React.Component {
   }
 }
 
-module.exports = Popular;
+export default Popular
