@@ -91,7 +91,7 @@ class Results extends React.Component {
     var loading = this.state.loading
 
     if ( loading ){
-      return <Loading />
+      return <Loading text='BATTLE' speed={50} />
     }
 
     if (error){
