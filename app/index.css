@@ -40,6 +40,11 @@ a {
               align-items: center;
 }
 
+.header {
+  text-align: center;
+  font-weight: 200;
+}
+
 .row {
   display: flex;
   -webkit-justify-content: space-around;
